@@ -1,13 +1,22 @@
-import './App.css';
-import Todos from './components/Todos';
-import Form from './components/Form';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import './App.css'
+import EditTodo from './components/EditTodo';
+import Todo from './components/Todo'
+import Todos from './components/Todos'
 
 function App() {
   return (
     <div className="App">
-      <h1>To-do App</h1>
-      <Form/>
-      <Todos />
+      <h1>To Do List</h1>
+      <Router>
+        <Routes>
+        <Route path='/' element={<Todos />}/>
+        <Route path='/:id' element={<Todo />}/>
+        <Route path='/:id/edit' element={<EditTodo />}/>
+        </Routes>
+        
+      </Router>
+      
     </div>
   );
 }

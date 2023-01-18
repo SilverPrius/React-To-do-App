@@ -6,7 +6,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  width: 80vw;
   border-style: solid;
   min-height: 78vh;
   text-align: center;
@@ -32,4 +32,12 @@ Form {
 .submit-button {
   padding: .5rem;
   background-color: bisque;
+}
+
+li {
+  list-style-type: none;
+}
+
+.completed{
+  text-decoration: line-through;
 }
